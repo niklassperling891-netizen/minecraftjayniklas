@@ -7,7 +7,7 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.Animal;
@@ -26,7 +26,7 @@ public class BreedGlowClient implements ClientModInitializer {
     public void onInitializeClient() {
         // Seit 1.21.9 braucht ein KeyMapping eine Kategorie.
         KeyMapping.Category category = KeyMapping.Category.register(
-                ResourceLocation.fromNamespaceAndPath("breedglow", "main"));
+                Identifier.fromNamespaceAndPath("breedglow", "main"));
 
         toggleKey = KeyBindingHelper.registerKeyBinding(new KeyMapping(
                 "key.breedglow.toggle",
