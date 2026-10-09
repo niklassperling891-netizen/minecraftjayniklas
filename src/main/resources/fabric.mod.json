@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "breedglow",
+  "version": "${version}",
+  "name": "BreedGlow",
+  "description": "Tiere leuchten gruen, wenn sie zuechtbar sind, und rot, wenn nicht. Ein/Aus per Taste (Standard: G).",
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["de.breedglow.BreedGlowClient"]
+  },
+  "mixins": ["breedglow.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
